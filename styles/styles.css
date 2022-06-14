@@ -14,6 +14,9 @@ header h1 {
 
 body {
     font-family: "Helvetica";
+    background-image: url(../pics/watercolor.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 footer {
