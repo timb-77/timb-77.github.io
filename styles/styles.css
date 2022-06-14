@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+header {
+    border-radius: 15px;
+    background-color: #1384ed;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 40px;
+    color: #fff;
+/*    text-transform: uppercase;*/
+}
+
+body {
+    font-family: "Helvetica";
+}
+
+footer {
+    box-shadow: 2px 5px 10px rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+footer h1 {
+    font-size: 20px;
+    color: #ccc;
+/*    text-transform: uppercase;*/
+}
+
+.sharky {
+    color: #0000ff;
+}
