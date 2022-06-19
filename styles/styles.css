@@ -1,32 +1,33 @@
 @charset "UTF-8";
 
 header {
-    border-radius: 15px;
-    background-color: #1384ed;
+    background-image: -webkit-linear-gradient(top, rgb(88, 29, 29), rgb(238, 178, 178));
+    /*background-color: rgb(187, 88, 88);*/
     text-align: center;
     opacity: 0.7;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    z-index: 100;
 }
 
 header h1 {
-    font-size: 40px;
-    color: #fff;
-/*    text-transform: uppercase;*/
+    font-size: 30px;
+    color: rgb(224, 196, 183);
+    /*text-transform: uppercase;*/
 }
 
 article {
-    -webkit-column-count: 2;
-    /*column-count: 2;*/
-
-    -webkit-column-gap: 20px;
-    /*column-gap: 20px;*/
-
-    -webkit-column-rule: solid 1px #cccccc;
-    /*column-rule: solid 1px #cccccc;*/
+    margin: 10px;
 }
 
 body {
     font-family: "Helvetica";
     background-image: url(../pics/pink-flowers.webp);
+    margin: 0px;
+    padding: 0px;
+    margin-top: 90px;
 }
 
 footer {
@@ -35,11 +36,11 @@ footer {
 }
 
 footer h1 {
-    font-size: 20px;
-    color: #ccc;
-/*    text-transform: uppercase;*/
+    font-size: 30px;
+    color: rgb(255, 102, 31);
+    /*text-transform: uppercase;*/
 }
 
-.sharky {
-    color: #0000ff;
+h1 {
+    font-size: 30px;
 }
