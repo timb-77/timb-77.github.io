@@ -4,6 +4,7 @@ header {
     border-radius: 15px;
     background-color: #1384ed;
     text-align: center;
+    opacity: 0.7;
 }
 
 header h1 {
@@ -12,11 +13,20 @@ header h1 {
 /*    text-transform: uppercase;*/
 }
 
+article {
+    -webkit-column-count: 2;
+    /*column-count: 2;*/
+
+    -webkit-column-gap: 20px;
+    /*column-gap: 20px;*/
+
+    -webkit-column-rule: solid 1px #cccccc;
+    /*column-rule: solid 1px #cccccc;*/
+}
+
 body {
     font-family: "Helvetica";
-    background-image: url(../pics/watercolor.webp);
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-image: url(../pics/pink-flowers.webp);
 }
 
 footer {
