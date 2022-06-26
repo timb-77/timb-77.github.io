@@ -39,10 +39,8 @@
     <!-- MAIN -->
     <div class="card">
       <div class="front">
-          <p>This is the front of the card.</p>
       </div>
       <div class="back">
-          <p>This is the back of the card.</p>
       </div>
     </div>
     
@@ -75,21 +73,21 @@
       });*/
 
       $(function() {
-        var onShake = function() {
-          alert("Shake it!");
+        var myShakeEvent = new Shake({
+          threshold: 15,
+          timeout: 1000
+        });
+
+        myShakeEvent.start();
+
+        window.onload = function() {
+          window.addEventListener('shake', shakeEventDidOccur, false);
+          
+          function shakeEventDidOccur() {
+            alert("Shake!");
+          }
         }
       });
-
-      window.onload = function() {
-        window.addEventListener(
-          'shake',
-          shakeEventDidOccur,
-          false);
-
-        function shakeEventDidOccur() {
-          onShake();
-        }
-      }
     </script>
   </body>
 
