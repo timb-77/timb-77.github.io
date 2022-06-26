@@ -29,44 +29,40 @@
   </head>
 
   <body>
+
+    <!-- HEADER -->
     <header>
-        <h1>FlApp</h1>
+      <h1>FlApp</h1>
+      <h2>Flower App</h2>
     </header>
 
-    <article>
-      <h1>Welcome!</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Integer malesuada nunc vel risus commodo viverra maecenas. Ac tortor vitae purus faucibus ornare suspendisse sed. Mauris vitae ultricies leo integer. Cursus vitae congue mauris rhoncus. Id eu nisl nunc mi. Justo laoreet sit amet cursus sit amet. Est ultricies integer quis auctor elit sed vulputate. Purus sit amet volutpat consequat mauris nunc. Sed id semper risus in hendrerit gravida rutrum quisque. See <a href="https://www.timbernwald.de">My website</a>.</p>
-
-      <h1>Bewegungssensoren</h1>
-      <h2>X-Axis:</h2>
-      <p id="accX"></p>
-      <h2>Y-Axis:</h2>
-      <p id="accY"></p>
-      <h2>Z-Axis:</h2>
-      <p id="accZ"></p>
-
-      <h1>Hi!</h1>
-      <p id="textblock_2">Fringilla ut morbi tincidunt augue interdum. Tellus in hac habitasse platea. A arcu cursus vitae congue. Condimentum vitae sapien pellentesque habitant morbi. Dolor magna eget est lorem ipsum dolor. Pharetra pharetra massa massa ultricies mi quis hendrerit. Ac turpis egestas integer eget. Justo eget magna fermentum iaculis eu non diam phasellus vestibulum. Sed adipiscing diam donec adipiscing tristique risus nec feugiat in.</p>
-    </article>
-
+    <!-- MAIN -->
+    <div class="card">
+      <div class="front">
+          <p>This is the front of the card.</p>
+      </div>
+      <div class="back">
+          <p>This is the back of the card.</p>
+      </div>
+    </div>
+    
+    <!-- FOOTER -->
     <footer>
-        <h1>The Fl(ower)App</h1>
-        <div id="footer_buttons"></div>
+        <!--<p>See also <a href="https://www.timbernwald.de">my website</a>.</p>-->
+        <button>Get flowers ... :)</button>
     </footer>
 
     <script src="lib/jquery-3.6.0.min.js"></script>
-    <script>
-      window.scroll(0, 1);
-/*
-      var button = document.createElement('button');
-      var text = document.createTextNode('Yees');
-      button.appendChild(text);
-      document.getElementsByTagName('footer')[0].prepend(button);
-*/
-      $(function() {
-        $('#footer_buttons').append('<button>Yees</button>');
-        $('button').on('click', function(){$('p#textblock_2').fadeToggle()});
+    <script src="lib/shake.js"></script>
+    <script type="text/javascript">
+      window.scroll(0, 1); /* Android: Hide address bar*/
 
+      $('.card').click(
+      function() {
+          $(this).toggleClass('turn');
+      });
+
+      /*$(function() {
         window.ondevicemotion = function(event) {
           var accelerationX = event.accelerationIncludingGravity.x;
           var accelerationY = event.accelerationIncludingGravity.y;
@@ -76,7 +72,24 @@
           $("#accY").html(accelerationY);
           $("#accZ").html(accelerationZ);
         };
+      });*/
+
+      $(function() {
+        var onShake = function() {
+          alert("Shake it!");
+        }
       });
+
+      window.onload = function() {
+        window.addEventListener(
+          'shake',
+          shakeEventDidOccur,
+          false);
+
+        function shakeEventDidOccur() {
+          onShake();
+        }
+      }
     </script>
   </body>
 
