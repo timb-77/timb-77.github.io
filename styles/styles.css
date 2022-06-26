@@ -6,6 +6,7 @@ body {
     margin: 0px;
     padding: 0px;
     /*margin-top: 90px;*/
+    width: 100%;
 }
 
 h1 {
@@ -60,15 +61,21 @@ footer button {
 /* === CARD STUFF === */
 
 .card {
-    width: 320px;
-    height: 480px;
+    /*width: 320px;
+    height: 480px;*/
+    width: 400px;
+    min-height: 100vh;
+
     position: relative;
     perspective: 600;
 }
 
 .front {
-    width: 100%;
-    height: 480px;
+    /*width: 100%;
+    height: 480px;*/
+    width: 400px;
+    min-height: 100vh;
+
     background-color: transparent;
     position: absolute;
     
@@ -80,8 +87,11 @@ footer button {
 }
 
 .back {
-    width: 100%;
-    height: 480px;
+    /*width: 100%;
+    height: 480px;*/
+    width: 400px;
+    min-height: 100vh;
+
     /*background-color: #00ffff;*/
     background-image: url('../pics/flowers/001.PNG');
     position: absolute;
