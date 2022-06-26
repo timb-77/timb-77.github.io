@@ -55,10 +55,15 @@
     <script type="text/javascript">
       window.scroll(0, 1); /* Android: Hide address bar*/
 
+      function func_flip_card() {
+        $(this).toggleClass('turn');
+      }
+
       $('.card').click(
-      function() {
-          $(this).toggleClass('turn');
-      });
+      /*function() {
+          $(this).toggleClass('turn');*/
+          func_flip_card
+      );
 
       /*$(function() {
         window.ondevicemotion = function(event) {
@@ -84,7 +89,8 @@
           window.addEventListener('shake', shakeEventDidOccur, false);
           
           function shakeEventDidOccur() {
-            alert("Shake!");
+            /*alert("Shake!");*/
+            func_flip_card();
           }
         }
       });
