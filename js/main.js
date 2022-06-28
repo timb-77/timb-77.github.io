@@ -29,7 +29,7 @@ window.onload = function() {
     
     function shakeEventDidOccur() {
         alert("Shake!");
-        $('.frame').css("background", "url(pics/torte.PNG)");
+        $('.frame').css("background", "url(pics/torte.png)");
         $('.content').text("HAPPY BIRTHDAY!!!");
     }
 }
