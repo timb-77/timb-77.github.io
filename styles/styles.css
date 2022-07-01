@@ -34,14 +34,17 @@ header h1 {
 /* === FRAME === */
 .frame {
     border: 15px solid #fff;
+    background: url(../pics/splash-ipad-landscape.png);
     background-color: #efefef;
-    background-size:auto;
+    background-size:contain;
     width: 350px;
+    height: 240px;
     box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
     transition: all 1s ease-in-out;
     margin: auto;
     margin-top: 22px;
 }
+/*
 .pic {
     width: 240px;
     height: 240px;
@@ -49,6 +52,7 @@ header h1 {
     opacity: 0;
     transition: all 1s ease-in-out;
 }
+*/
 .content {
     padding: 0 18px;
     background-color: #f1f1f1;

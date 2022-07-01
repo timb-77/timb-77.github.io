@@ -47,8 +47,17 @@ window.onload = function() {
     window.addEventListener('shake', shakeEventDidOccur, false);
     
     function shakeEventDidOccur() {
-        //alert("Shake!");
         $('.frame').css("background", "url(pics/torte.png)");
         $('.content').text("HAPPY BIRTHDAY!!!");
+
+        $('.btn-yes').prop("disabled", true);
+        $('.btn-no').prop("disabled", true);
+        startConfetti();
+        setTimeout( 
+            function() {
+                stopConfetti();
+                $('.btn-yes').prop("disabled", false);
+                $('.btn-no').prop("disabled", false) },
+            8000);
     }
 }
