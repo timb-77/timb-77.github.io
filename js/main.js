@@ -1,6 +1,6 @@
 "use strict";
 
-const NUM_OF_FLOWER_PICS = 20 - 1;
+const NUM_OF_FLOWER_PICS = 30 - 1;
 
 window.scroll(0, 1); // Android: Hide address bar
 
