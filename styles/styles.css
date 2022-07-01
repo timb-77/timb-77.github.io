@@ -1,7 +1,15 @@
 @charset "UTF-8";
+@font-face {
+	font-family: UbuntuRegular;
+	src: url('../fonts/Ubuntu-Regular.ttf');
+
+    font-family: ShadowsIntoLightRegular;
+    src: url('../fonts/ShadowsIntoLight-Regular.ttf');
+}
 
 body {
-    font-family: "Helvetica";
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 45px;
     background-image: url(../pics/pink-flowers-background.png);
     margin: 0px;
     padding: 0px;
@@ -16,19 +24,18 @@ header {
     top: 0px;
     z-index: 100;
 }
-h1 {
+header h1 {
     font-size: 30px;
     padding-top: 10px;
     margin: 0px;
+    color: rgb(224, 196, 183);
 }
-h2 {
+header h2 {
     margin: 0px;
     padding-top: 0px;
     padding-bottom: 15px;
-}
-header h1 {
-    font-size: 30px;
-    color: rgb(224, 196, 183);
+    color: rgb(88, 29, 29);
+    text-shadow: 2px 2px rgb(238, 178, 178);
 }
 
 /* === MAIN === */
@@ -49,8 +56,8 @@ header h1 {
     background-color: #f1f1f1;
     border-radius: 10px;
     opacity: 0.9;
+    font-family: 'Shadows Into Light', cursive;
     font-size: 45px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     position:relative;
 
 }
@@ -60,7 +67,9 @@ footer {
     position:absolute;
     bottom:0;
 }
-
+button {
+    font-family: 'Ubuntu', sans-serif;
+}
 .btn-group {
     width: 100%;
     box-shadow: 2px 5px 10px rgba(0,0,0,0.5);
