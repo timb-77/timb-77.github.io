@@ -38,6 +38,20 @@ function() {
 });
 
 window.onload = function() {
+    
+    // feature detect
+    if (typeof DeviceMotionEvent.requestPermission === 'function') {
+        DeviceMotionEvent.requestPermission()
+            .then(permissionState => {
+                if (permissionState === 'granted') {
+                    window.addEventListener('devicemotion', () => {});
+                }
+            })
+            .catch(console.error);
+        } else {
+        // handle regular non iOS 13+ devices
+    }
+
     var myShakeEvent = new Shake({
         threshold: 15, // optional shake strength threshold
         timeout: 1000 // optional, determines the frequency of event generation
