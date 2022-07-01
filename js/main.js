@@ -17,23 +17,23 @@ function doTimerHandling() {
         }, 5000 );
 }
 
+function doRandomPics() {
+    var picPath = "url(pics/flowers/" + Math.floor(Math.random() * NUM_OF_FLOWER_PICS).toString() + ".PNG)";
+    $('.frame').css("background", picPath);
+    $('.frame').css("background-size", "cover");
+}
+
 $('.btn-no').click(
 function() {
-    var picPath = "url(pics/flowers/" + Math.floor(Math.random() * NUM_OF_FLOWER_PICS).toString() + ".PNG)";
-    //$('.frame').css("background", "url(pics/flowers/001.PNG)");
-    $('.frame').css("background", picPath);
     $('.content').text("Bitte schön!");
-
+    doRandomPics();
     doTimerHandling();
 });
 
 $('.btn-yes').click(
 function() {
-    var picPath = "url(pics/flowers/" + Math.floor(Math.random() * NUM_OF_FLOWER_PICS).toString() + ".PNG)";
-    //$('.frame').css("background", "url(pics/flowers/001.PNG)");
-    $('.frame').css("background", picPath);
     $('.content').text("... dann bekommst Du eben nochmal welche :)");
-
+    doRandomPics();
     doTimerHandling();
 });
 
@@ -48,6 +48,7 @@ window.onload = function() {
     
     function shakeEventDidOccur() {
         $('.frame').css("background", "url(pics/torte.png)");
+        $('.frame').css("background-size", "cover");
         $('.content').text("HAPPY BIRTHDAY!!!");
 
         $('.btn-yes').prop("disabled", true);
