@@ -37,8 +37,7 @@ function() {
     doTimerHandling();
 });
 
-window.onload = function() {
-    
+function onClick() {
     // feature detect
     if (typeof DeviceMotionEvent.requestPermission === 'function') {
         DeviceMotionEvent.requestPermission()
@@ -46,11 +45,17 @@ window.onload = function() {
                 if (permissionState === 'granted') {
                     window.addEventListener('devicemotion', () => {});
                 }
-            })
-            .catch(console.error);
+            }) 
+            .catch(error)(console.error(error));
         } else {
-        // handle regular non iOS 13+ devices
+        alert("Schade");
     }
+}
+
+window.onload = function() {
+
+    var elems = document.getElementsByTagName('header');
+    elems[0].onclick = onClick;
 
     var myShakeEvent = new Shake({
         threshold: 15, // optional shake strength threshold
