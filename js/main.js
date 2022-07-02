@@ -5,7 +5,7 @@ const NUM_OF_FLOWER_PICS = 30 - 1;
 window.scroll(0, 1); // Android: Hide address bar
 
 var timeoutId = 0;
-function doTimerHandling() {
+function doTimerHandling(timeoutMillisec) {
 
     if (timeoutId != 0) {
         clearTimeout(timeoutId);
@@ -14,7 +14,7 @@ function doTimerHandling() {
         function() {
             $('.content').text("Hattest Du heute schon Blumen?"); 
             timeoutId = 0;
-        }, 5000 );
+        }, timeoutMillisec );
 }
 
 function doRandomPics() {
@@ -27,14 +27,14 @@ $('.btn-no').click(
 function() {
     $('.content').text("Bitte schön!");
     doRandomPics();
-    doTimerHandling();
+    doTimerHandling(5000);
 });
 
 $('.btn-yes').click(
 function() {
     $('.content').text("... dann bekommst Du eben nochmal welche :)");
     doRandomPics();
-    doTimerHandling();
+    doTimerHandling(5000);
 });
 
 function onClick() {
@@ -79,5 +79,6 @@ window.onload = function() {
                 $('.btn-yes').prop("disabled", false);
                 $('.btn-no').prop("disabled", false) },
             8000);
+        doTimerHandling(8000);
     }
 }
