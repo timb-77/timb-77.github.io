@@ -33,26 +33,38 @@
 
   <body>
 
-    <!-- HEADER -->
-    <header>
-      <h1>FlApp</h1>
-      <h2>Flower App</h2>
-    </header>
-
-    <!-- MAIN -->
-    <div class="frame">
-      <div class="pic">
+    <!-- FLOATING MENU BUTTON -->
+    <div class="dropdown">
+      <div class="header-button"></div>
+      <div id="theDropdownMenu" class="dropdown-content">
+        <a>Flower of the day</a>
+        <a>About the App</a>
       </div>
     </div>
 
-    
-    <!-- FOOTER -->
-    <footer class="btn-group">
+    <!-- HEADER -->
+    <header>
+      <nav class="header">
+        <div class="header-text">FlApp</div>
+        <h2 id="appName">Flower App</h2>
+      </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+      <div class="frame">
+        <div class="pic">
+        </div>
+      </div>
       <div class="content">
         Hattest Du heute schon Blumen?
       </div>
-      <button class="btn-yes" style="width: 50%">Ja</button>
-      <button class="btn-no" style="width: 50%">Nein</button>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="btn-group">
+      <button class="btn-yes">Ja</button>
+      <button class="btn-no">Nein</button>
     </footer>
     
     <script src="lib/jquery-3.6.0.min.js"></script>

@@ -37,6 +37,11 @@ function() {
     doTimerHandling(5000);
 });
 
+$('.header-button').click(
+function() {
+    $('.dropdown-content').toggleClass('show');
+});
+
 function onClick() {
     // feature detect
     if (typeof DeviceMotionEvent.requestPermission === 'function') {
@@ -54,8 +59,8 @@ function onClick() {
 
 window.onload = function() {
 
-    var elems = document.getElementsByTagName('header');
-    elems[0].onclick = onClick;
+    var elem = document.getElementById('appName');
+    elem.onclick = onClick;
 
     var myShakeEvent = new Shake({
         threshold: 15, // optional shake strength threshold
