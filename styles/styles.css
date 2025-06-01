@@ -1,6 +1,3 @@
-/* =============== */
-/* === GENERAL ===*/
-/* =============== */
 @charset "UTF-8";
 @font-face {
 	font-family: UbuntuRegular;
@@ -10,355 +7,98 @@
     src: url('../fonts/ShadowsIntoLight-Regular.ttf');
 }
 
-/* CSS Reset and Base Styles */
-* {
-    box-sizing: border-box;
-}
-
-html {
-    font-size: 16px; /* Base font size for rem calculations */
-}
-
 body {
     font-family: 'Ubuntu', sans-serif;
+    font-size: 45px;
     background-image: url(../pics/pink-flowers-background.png);
-    background-size: cover;
-    background-attachment: fixed;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
 }
 
-/* ============== */
 /* === HEADER === */
-/* ============== */
 header {
     background-image: -webkit-linear-gradient(top, rgb(88, 29, 29), rgb(238, 178, 178));
-    background-image: linear-gradient(to bottom, rgb(88, 29, 29), rgb(238, 178, 178));
     text-align: center;
     width: 100%;
+    top: 0px;
     z-index: 100;
-    font-size: clamp(1.5rem, 4vw, 2.8rem);
-    padding: 0.5rem 0;
-    position: relative;
 }
-
-.header {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 1rem;
+header h1 {
+    font-size: 30px;
+    padding-top: 10px;
+    margin: 0px;
+    color: rgb(224, 196, 183);
 }
-
-.header-text {
-    font-weight: bold;
-    color: rgb(88, 29, 29);
-    text-shadow: 2px 2px rgb(238, 178, 178);
-    display: none; /* Hidden by default, shown on larger screens */
-}
-
-.dropdown {
-    position: fixed;
-    top: 1rem;
-    right: 1rem;
-    z-index: 1000;
-    display: block;
-}
-
-.header-button {
-    display: block;
-    height: clamp(40px, 8vw, 54px);
-    width: clamp(40px, 8vw, 54px);
-    margin: 0;
-    border-radius: 50%;
-    border: 2px solid bisque;
-    background-image: url("../pics/pink-flower-icon-iphone.png");
-    background-color: rgb(224, 196, 183);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: 70%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);
-    position: relative;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.header-button:hover {
-    transform: scale(1.1);
-}
-
-.dropdown-content {
-    font-size: clamp(0.9rem, 2.5vw, 1rem);
-    display: none;
-    position: absolute;
-    right: 0;
-    top: calc(100% + 0.5rem);
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1001;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 0.75rem 1rem;
-    text-decoration: none;
-    display: block;
-    transition: background-color 0.3s ease;
-}
-
-.dropdown-content a:hover {
-    background-color: #ddd;
-}
-
-.show {
-    display: block;
-}
-
 header h2 {
-    margin: 0;
-    padding: 0.5rem 0;
+    margin: 0px;
+    padding-top: 0px;
+    padding-bottom: 15px;
     color: rgb(88, 29, 29);
     text-shadow: 2px 2px rgb(238, 178, 178);
-    font-size: clamp(1.2rem, 3.5vw, 2rem);
 }
 
-/* ============ */
 /* === MAIN === */
-/* ============ */
-main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    gap: 1rem;
-}
-
 .frame {
-    border: clamp(8px, 2vw, 15px) solid #fff;
+    border: 15px solid #fff;
     background: url(../pics/splash-ipad-landscape.png);
     background-color: #efefef;
-    background-size: cover;
-    background-position: center;
-    width: min(90vw, 500px);
-    height: min(60vw, 350px);
-    max-height: 70vh;
-    box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.2);
+    background-size:cover;
+    width: 350px;
+    height: 240px;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
     transition: all 1s ease-in-out;
-    border-radius: 8px;
-    overflow: hidden;
+    margin: auto;
+    margin-top: 22px;
+}
+.content {
+    padding: 0 18px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    opacity: 0.9;
+    font-family: 'Shadows Into Light', regular;
+    font-size: 45px;
+    position:relative;
+
+}
+
+/* === FOOTER === */
+footer {
+    position:absolute;
+    bottom:0;
+}
+button {
+    font-family: 'Ubuntu', sans-serif;
+}
+.btn-group {
+    width: 100%;
+    box-shadow: 2px 5px 10px rgba(0,0,0,0.5);
+}
+.btn-group button {
+    font-size: 26px;
+    background-color: #04AA6D; /* Green background */
+    background-image: -webkit-linear-gradient(top, rgb(88, 29, 29), rgb(238, 178, 178));
+    border: 1px solid green; /* Green border */
+    border-radius: 4px; /* Rounded buttons */
+    color: white; /* White text */
+    padding: 20px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    float: left; /* Float the buttons side by side */
+}
+.btn-group button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+}
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+/* Add a background color on hover */
+.btn-group button:hover {
+    background-color: #3e8e41;
 }
 
 .content {
-    padding: clamp(0.5rem, 3vw, 1.125rem);
-    background-color: rgba(241, 241, 241, 0.9);
-    border-radius: 10px;
-    font-family: 'Shadows Into Light', cursive;
-    font-size: clamp(1.2rem, 4vw, 2.8rem);
     text-align: center;
-    max-width: min(90vw, 500px);
-    backdrop-filter: blur(5px);
-}
-
-/* ============== */
-/* === FOOTER === */
-/* ============== */
-footer {
-    width: 100%;
-    margin-top: auto;
-}
-
-.btn-group {
-    width: 100%;
-    box-shadow: 0 -2px 10px rgba(0,0,0,0.3);
-    display: flex;
-}
-
-.btn-group button {
-    font-family: 'Ubuntu', sans-serif;
-    font-size: clamp(1rem, 3vw, 1.625rem);
-    background-image: linear-gradient(to bottom, rgb(88, 29, 29), rgb(238, 178, 178));
-    border: none;
-    border-radius: 0;
-    color: white;
-    padding: clamp(1rem, 4vw, 1.5rem);
-    cursor: pointer;
-    flex: 1;
-    transition: all 0.3s ease;
-    font-weight: 500;
-    min-height: 60px;
-}
-
-.btn-group button:first-child {
-    border-right: 1px solid rgba(255,255,255,0.3);
-}
-
-.btn-group button:hover {
-    background-image: linear-gradient(to bottom, rgb(68, 19, 19), rgb(218, 158, 158));
-    transform: translateY(-2px);
-}
-
-.btn-group button:active {
-    transform: translateY(0);
-}
-
-.btn-group button:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-    transform: none;
-}
-
-/* =================== */
-/* === MEDIA QUERIES === */
-/* =================== */
-
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
-    .header-text {
-        display: block;
-        position: absolute;
-        left: 1rem;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-    
-    main {
-        gap: 1.5rem;
-    }
-}
-
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-    body {
-        background-attachment: fixed;
-    }
-    
-    .frame {
-        width: min(70vw, 600px);
-        height: min(45vw, 400px);
-    }
-    
-    .dropdown-content {
-        min-width: 200px;
-    }
-    
-    main {
-        padding: 2rem;
-        gap: 2rem;
-    }
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-    .frame {
-        width: min(60vw, 700px);
-        height: min(35vw, 450px);
-    }
-    
-    .content {
-        max-width: min(80vw, 600px);
-    }
-}
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-    .frame {
-        width: 700px;
-        height: 450px;
-    }
-    
-    header {
-        font-size: 2.8rem;
-    }
-}
-
-/* Landscape orientation adjustments */
-@media (orientation: landscape) and (max-height: 600px) {
-    .frame {
-        height: min(50vh, 300px);
-        width: auto;
-        aspect-ratio: 4/3;
-    }
-    
-    .content {
-        font-size: clamp(1rem, 3vh, 2rem);
-        padding: 0.5rem;
-    }
-    
-    header {
-        padding: 0.25rem 0;
-    }
-    
-    main {
-        padding: 0.5rem;
-        gap: 0.5rem;
-    }
-}
-
-/* Touch device optimizations */
-@media (hover: none) and (pointer: coarse) {
-    .btn-group button {
-        min-height: 64px; /* Minimum touch target size */
-    }
-    
-    .header-button {
-        min-height: 44px;
-        min-width: 44px;
-    }
-    
-    .dropdown-content a {
-        padding: 1rem;
-        min-height: 44px;
-        display: flex;
-        align-items: center;
-    }
-}
-
-/* High DPI displays */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    .header-button {
-        background-image: url("../pics/pink-flower-icon-ipad-retina.png");
-    }
-}
-
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
-    .dropdown-content {
-        background-color: #2a2a2a;
-        color: white;
-    }
-    
-    .dropdown-content a {
-        color: white;
-    }
-    
-    .dropdown-content a:hover {
-        background-color: #444;
-    }
-    
-    .content {
-        background-color: rgba(42, 42, 42, 0.9);
-        color: white;
-    }
-}
-
-/* Reduced motion for accessibility */
-@media (prefers-reduced-motion: reduce) {
-    * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-    }
-    
-    .frame {
-        transition: none;
-    }
 }
